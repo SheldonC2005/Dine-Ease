@@ -1,0 +1,61 @@
+.nav-bar {
+    background-color: #d9d9d9;
+    height: 175px;
+    position: relative;
+    width: 1880px;
+  }
+  
+  .nav-bar .text-wrapper {
+    color: #1e1e1e;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 448px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 50px;
+    width: 135px;
+  }
+  
+  .nav-bar .div {
+    color: #1e1e1e;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 857px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 50px;
+    width: 232px;
+  }
+  
+  .nav-bar .text-wrapper-2 {
+    color: #1e1e1e;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 648px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 50px;
+    width: 144px;
+  }
+
+  :root{
+    --red: #d01c28;
+  }
+  *{
+    margin:0;
+  }
+  
+  button {
+    all: unset;
+    padding: 6px 16px;
+    background: var(--red);
+    height: 55px;
+    color: white;
+    font-weight: 500;
+  }
