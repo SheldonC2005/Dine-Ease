@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home2.css';
 
-const Home2 = () => {
+const Home2 = ({ onAddToCart }) => {
   const navigate = useNavigate();
 
   const handleBreakfastClick = () => {
@@ -15,6 +15,10 @@ const Home2 = () => {
 
   const handleDinnerClick = () => {
     navigate('/dinner');
+  };
+
+  const handleAddToCartFromHome2 = (item) => {
+    onAddToCart(item);
   };
 
   return (

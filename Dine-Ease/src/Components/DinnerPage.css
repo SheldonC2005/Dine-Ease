@@ -57,11 +57,12 @@ body, html {
 .dinner-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 20px; /* Reduce the gap between items */
   margin-top: 20px;
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
+  margin-left: 110px;
 }
 
 .dinner-item {
@@ -71,9 +72,11 @@ body, html {
   align-items: center;
   background-color: #333;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 10px; /* Add border radius */
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+  width: 200px; /* Set a fixed width */
+  height: 200px; /* Make it a square */
 }
 
 .dinner-item:hover {
@@ -82,9 +85,9 @@ body, html {
 
 .dinner-item img {
   width: 100%;
-  max-width: 200px;
-  height: auto;
+  height: 70%; /* Adjust height to fit within the square */
   border-radius: 10px;
+  object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -100,10 +103,11 @@ body, html {
 }
 
 .caption {
-  margin-top: 10px;
+  margin-top: -50px; /* Move the caption upwards by 50px */
   font-size: 1.2em;
   color: #fff;
   font-family: 'Arial', sans-serif; /* Change the font */
+  line-height: 50px;
 }
 
 .details {

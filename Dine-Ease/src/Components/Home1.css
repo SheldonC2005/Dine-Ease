@@ -3,57 +3,93 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .home-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Distribute content evenly */
   align-items: center;
   text-align: center;
-  background-color: #000;
-  color: #fff;
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
+  padding-top: 10px; /* Reduced padding to move content upwards */
 }
 
 .header {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px; /* Reduced margin to move header upwards */
 }
 
 .logo {
-  font-size: 2.5em;
-  font-weight: bold;
+  color: #FFF;
+  text-align: center;
+  font-family: Kameron;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .image-gallery {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  overflow: hidden;
   width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
+  position: relative;
+  margin-top: 10px; /* Reduced margin to move gallery upwards */
+  background-color: #fff;
+  padding: 20px 0;
 }
 
-.image-gallery img {
+.image-track {
+  display: flex;
+  animation: scroll 15s linear infinite;
+  gap: 0;
+  background-color: #fff;
+  height:max-content
+}
+
+.image-item {
+  flex: 0 0 12.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+}
+
+.image-item img {
   width: 100%;
-  max-width: 200px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .order-button {
-  background-color: #fff;
-  color: #000;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.order-button:hover {
-  background-color: #ddd;
+  margin-top: 70px;
+  width: 271px;
+height: 130px;
+flex-shrink: 0;
+color: #000;
+text-align: center;
+font-family: "Inria Sans";
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }

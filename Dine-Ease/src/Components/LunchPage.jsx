@@ -37,9 +37,9 @@ const LunchPage = () => {
     { name: 'Pasta', price: 120, img: '/images/pasta.png', description: 'Creamy pasta with a rich sauce.' },
     { name: 'Salad', price: 80, img: '/images/salad.png', description: 'Fresh salad with a mix of vegetables.' },
     { name: 'Sandwich', price: 90, img: '/images/sandwich.png', description: 'Tasty sandwich with ham, cheese, and veggies.' },
-    { name: 'Soup', price: 70, img: '/images/soup.png', description: 'Warm and comforting soup.' },
     { name: 'Fries', price: 50, img: '/images/fries.png', description: 'Crispy fries with a side of ketchup.' },
     { name: 'Juice', price: 60, img: '/images/juice.png', description: 'Freshly squeezed juice.' },
+    { name: 'Coffee', price: 25, img: '/images/coffee.png', description: 'Strong Coffee to complement your lunch!' },
   ];
 
   const calculateTotal = () => {
