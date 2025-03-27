@@ -34,35 +34,16 @@ body, html {
   font-weight: bold;
 }
 
-.cart-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.cart-button:hover {
-  background-color: #45a049;
-}
+/* Cart button styles removed */
 
 .breakfast-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px; /* Reduce the gap between items */
+  gap: 70px; /* Reduce the gap between items */
   margin-top: 20px;
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
-  margin-left: 110px;
 }
 
 .breakfast-item {
@@ -170,37 +151,83 @@ body, html {
   color: #fff;
 }
 
-.cart-popup {
-  position: fixed;
-  top: 20%;
-  right: 20%;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+/* filepath: d:\Data\Github\Sheldon\Dine-Ease\Dine-Ease\src\Components\LunchPage.css */
+/* filepath: d:\Data\Github\Sheldon\Dine-Ease\Dine-Ease\src\Components\DinnerPage.css */
+
+.cart-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10; /* Ensure it's above other elements */
 }
 
-.cart-popup h2 {
-  margin-top: 0;
+.cart-button:hover {
+  background-color: #45a049;
 }
+/* Cart popup styles removed */
 
-.cart-popup table {
+/* filepath: d:\Data\Github\Sheldon\Dine-Ease\Dine-Ease\src\Components\LunchPage.css */
+/* filepath: d:\Data\Github\Sheldon\Dine-Ease\Dine-Ease\src\Components\DinnerPage.css */
+
+.header {
   width: 100%;
-  border-collapse: collapse;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly */
+  align-items: center;
+  position: relative;
 }
 
-.cart-popup th, .cart-popup td {
-  border: 1px solid #fff;
-  padding: 8px;
-  text-align: left;
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #f44336; /* Red background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10; /* Ensure it's above other elements */
 }
 
-.cart-popup th {
-  background-color: #444;
+.back-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
 }
 
-.cart-popup h3 {
-  margin-top: 20px;
+.cart-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+.cart-button:hover {
+  background-color: #45a049;
 }
