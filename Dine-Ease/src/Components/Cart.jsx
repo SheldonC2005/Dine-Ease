@@ -5,15 +5,18 @@ import { useNavigate } from 'react-router-dom';
 const Cart = ({ cart, breakfastItems, lunchItems, dinnerItems, onIncrease, onDecrease }) => {
     const navigate = useNavigate();
 
-    // Combine all item lists
     const allItems = [...breakfastItems, ...lunchItems, ...dinnerItems];
 
-    // Calculate the total price
     const calculateTotal = () => {
         return Object.keys(cart).reduce((total, itemName) => {
             const item = allItems.find((i) => i.name === itemName);
             return total + (item?.price || 0) * cart[itemName];
         }, 0);
+    };
+
+    const handleCheckout = () => {
+        const total = calculateTotal();
+        navigate('/payment', { state: { total } });
     };
 
     return (
@@ -51,7 +54,7 @@ const Cart = ({ cart, breakfastItems, lunchItems, dinnerItems, onIncrease, onDec
                     </table>
                     <div className="cart-total">
                         <h2>Total: &#8377; {calculateTotal()}</h2>
-                        <button className="checkout-button" onClick={() => alert('Checkout functionality coming soon!')}>
+                        <button className="checkout-button" onClick={handleCheckout}>
                             Checkout
                         </button>
                     </div>

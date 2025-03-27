@@ -9,6 +9,8 @@ import BreakfastPage from './Components/BreakfastPage';
 import LunchPage from './Components/LunchPage';
 import DinnerPage from './Components/DinnerPage';
 import Cart from './Components/Cart';
+import Payment from './Components/Payment';
+import Final from './Components/Final'; // Import the Final component
 
 const Main = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -42,6 +44,14 @@ const Main = () => {
             }
             return newCart;
         });
+    };
+
+    const calculateTotal = () => {
+        const allItems = [...breakfastItems, ...lunchItems, ...dinnerItems];
+        return Object.keys(cart).reduce((total, itemName) => {
+            const item = allItems.find((i) => i.name === itemName);
+            return total + (item?.price || 0) * cart[itemName];
+        }, 0);
     };
 
     const breakfastItems = [
@@ -154,11 +164,26 @@ const Main = () => {
                                 dinnerItems={dinnerItems}
                                 onIncrease={handleIncrease}
                                 onDecrease={handleDecrease}
+                                calculateTotal={calculateTotal}
                             />
                         ) : (
                             <Navigate to="/login" />
                         )
                     }
+                />
+                <Route
+                    path="/payment"
+                    element={
+                        isAuthenticated ? (
+                            <Payment total={calculateTotal()} />
+                        ) : (
+                            <Navigate to="/login" />
+                        )
+                    }
+                />
+                <Route
+                    path="/final"
+                    element={<Final />}
                 />
             </Routes>
         </Router>
